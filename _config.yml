@@ -1,4 +1,12 @@
 name: Salavat Khanov
+description: iOS Developer & Hobbyist Photographer
 url: http://localhost:4000
+blog_url: http://localhost:4000/blog
+email: hello@khanov.me
+twitter: https://twitter.com/khanov
+version: 0.1
 markdown: redcarpet
 pygments: true
+
+gems:
+  - jekyll-time-to-read
