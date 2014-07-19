@@ -1,0 +1,30 @@
+/* Loading of stylesheet for the design */
+@import "./main";
+
+/* Important external stylesheets */
+@import "./owl.carousel";
+@import "./owl.theme";
+@import "./fontello";
+@import "./jquery.fancybox8cbb";
+@import "./jquery.fs.wallpaper";
+@import "./animate";
+
+/* Blog post formatting */
+
+header.post-header {
+	position: inherit;
+}
+
+.post-header h3 {
+	color: #000;
+	font-weight: 500;
+	text-transform: none;
+	margin-bottom: 0;
+}
+
+#main-content article {
+	margin-bottom: 60px;
+}
+
+#main-content article a {color: #000 ; text-decoration: none; transition: all 0.2s ease-in-out; }
+#main-content article a:hover {color: #3d8ae3 ; text-decoration: none; padding-bottom: 3px;}

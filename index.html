@@ -1,13 +1,22 @@
 ---
-layout: default
-title: Your New Jekyll Site
+layout: home
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<section id="main-content" class="container" role="main">
+
+{% for post in site.posts %}
+	<article id="post-1" class="post row">
+	    <header class="post-header col-xs-12 col-sm-12 col-md-9">
+	        <h3 class="post-title"><a href="{{ post.url }}" title="{{ post.subtitle }}">{{ post.title }}</a></h3>
+	        <div class="post-meta">
+	        </div>
+	    </header>
+	    <section class="post-excerpt col-xs-12 col-sm-12 col-md-9 col-md-offset-2">
+	        <p>{{ post.excerpt }}</p>
+			<a rel="nofollow" href="{{ post.url }}" title="{{ post.title }}">READ MORE</a>
+	    </section>
+	    
+	</article>
+{% endfor %}
+
+</section>
