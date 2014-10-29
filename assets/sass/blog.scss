@@ -67,7 +67,7 @@ h5 {
 	text-align:left;
 }
 
-p a, ul li a, ol li a {color: #3d8ae3 ; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.2s ease-in-out; }
+p a, ul li a, ol li a {color: #000 ; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.2s ease-in-out; }
 p a:hover, ul li a:hover, ol li a:hover {color: #3d8ae3 ; text-decoration: none; border-bottom: 1px solid #3d8ae3; padding-bottom: 3px;}
 
 #site-head .vertical-middle {
@@ -113,6 +113,10 @@ p a:hover, ul li a:hover, ol li a:hover {color: #3d8ae3 ; text-decoration: none;
 .nav-list .nav-item a:hover {
 	border-bottom-color: white;
 }
+
+#main-content article .image-holder img { width: 100%; }
+#main-content article a {color: #000 ; text-decoration: none; transition: all 0.2s ease-in-out; }
+#main-content article a:hover {color: #3d8ae3 ; text-decoration: none; padding-bottom: 3px;}
 
 .post-subtitle {
 	margin-top: 0.5em;

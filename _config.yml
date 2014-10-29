@@ -1,12 +1,13 @@
 name: Salavat Khanov
-description: iOS Developer with the Passion of Creativity
+description: iOS Developer with a Passion for Creativity
 url: http://localhost:4000
 blog_url: http://localhost:4000/blog
 email: hello@khanov.me
 twitter: https://twitter.com/khanov
-version: 0.1
+version: 1.0
 markdown: redcarpet
 pygments: true
+permalink: /posts/:title.html
 
 gems:
   - jekyll-time-to-read
