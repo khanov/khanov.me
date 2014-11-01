@@ -1,13 +1,54 @@
-name: Salavat Khanov
-description: iOS Developer with a Passion for Creativity
-url: http://localhost:4000
-blog_url: http://localhost:4000/blog
-email: hello@khanov.me
-twitter: https://twitter.com/khanov
-version: 1.0
-markdown: redcarpet
-pygments: true
-permalink: /posts/:title.html
 
-gems:
-  - jekyll-time-to-read
+
+# Site Settings
+title: 						"Salavat Khanov"
+email: 						"hello@khanov.me"
+description: 				"iOS Developer with a Passion for Creativity"
+baseurl: 					""
+url: 						"https://khanov.me"
+logourl: 					"/assets/img/bloglogo.jpg"		
+fa-logo: 					"fa-bookmark-o"
+paginate: 					5
+
+
+# Author Settings
+author_name: 				"Salavat Khanov"
+author_url: 				"https://khanov.me"
+author_bio: 				"iOS Developer. Alumnus of The Global Undergraduate Exchange Program."
+author_email: 				"hello@khanov.me"
+author_image: 				"/assets/img/authorimage.jpg"
+
+
+# Social Settings
+twitter_url: 				"https://twitter.com/khanov"
+facebook_url: 				""
+github_url:  				"https://github.com/khanov"
+youtube_url:  				""
+dribbble_url:  				""
+googleplus_url: 			""
+instagram_url:  			""
+pinterest_url:  			""
+linkedin_url:  				""
+
+
+# Theme Settings
+theme_disqus_shortname: 	""
+theme_google_comments: 		false
+theme_analytics_id: 		"UA-23552027-1"
+theme_analytics_domain: 	"khanov.me"
+theme_reading_time: 		true
+theme_autoload_comments: 	false
+theme_always_show_nav: 		false
+
+
+# SASS Settings
+# DO NOT MODIFY
+sass:
+ sass_dir: "assets/css/"
+ style: :compressed
+
+
+# Build Settings
+markdown: 					kramdown
+permalink: 					pretty
+

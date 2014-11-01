@@ -1,22 +1,40 @@
 ---
-layout: home
+layout: default
 ---
 
-<section id="main-content" class="container" role="main">
+<div class="profile">
+	{% if site.logourl != "" %}<img src="{{ site.logourl }}" class="profileimage" alt="user">{% endif %}
+	<h4>{{ site.title }}</h4>
+	<p>{{ site.description }}</p>
+	<hr>
+</div>
 
-{% for post in site.posts %}
-	<article id="post-1" class="post row">
-	    <header class="post-header col-xs-12 col-sm-12 col-md-9">
-	        <h3 class="post-title"><a href="{{ post.url }}" title="{{ post.subtitle }}">{{ post.title }}</a></h3>
-	        <div class="post-meta">
-	        </div>
-	    </header>
-	    <section class="post-excerpt col-xs-12 col-sm-12 col-md-9 col-md-offset-2">
-	        <p>{{ post.excerpt }}</p>
-			<a rel="nofollow" href="{{ post.url }}" title="{{ post.title }}">READ MORE</a>
-	    </section>
-	    
-	</article>
-{% endfor %}
+<section class="posts postindex wrapper">
+
+	{% for post in paginator.posts %}
+		<article class="post {% if post.featured == true %} featured {% endif %}">
+			<header>
+				<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
+				<h2>
+					{% for category in post.categories %}
+					{{ category }} 
+					{% endfor %}
+				</h2>
+				<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+				<span>
+					Posted on <i class="fa fa-clock-o"></i><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>.
+				</span>
+				<div class="excerpt">
+					{% if post.content contains '<!--more-->' %}
+						{{ post.content | split:'<!--more-->' | first }}
+					{% else %}
+						{{ post.content }}   
+					{% endif %}
+				</div>
+			</header>
+		</article>
+	{% endfor %}
+
+	{% include pagination.html %}
 
 </section>
